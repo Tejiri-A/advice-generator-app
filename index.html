@@ -16,10 +16,22 @@
     <script defer type="module" src="./src/main.js"></script>
   </head>
   <body>
-    <main>
-      <div>
-        <p>Advice # <span id="advide-id"></span></p>
-        <p id="advice-text"></p>
+    <main
+      class="bg-neutral-blue-950 min-h-[100vh] grid items-center justify-center"
+    >
+      <div
+        class="w-[90vw] max-w-xl bg-neutral-blue-650 px-8 py-12 flex flex-col items-center justify-center gap-4 rounded-lg relative isolate"
+      >
+        <p class="text-primary-green-300 tracking-widest font-medium">
+          Advice # <span id="advice-id"></span>
+        </p>
+        <blockquote id="advice-text">
+          <p class="quote">
+            It is easy to sit up and take notice, what's difficult is getting up
+            and taking action.
+          </p>
+        </blockquote>
+
         <div>
           <picture>
             <source
@@ -32,7 +44,7 @@
             />
           </picture>
         </div>
-        <button type="button">
+        <button type="button" class="btn">
           <img src="./src/images/icon-dice.svg" alt="dice icon" />
         </button>
       </div>

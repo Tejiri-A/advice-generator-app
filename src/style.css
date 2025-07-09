@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @layer components {
@@ -12,15 +13,44 @@
 }
 @layer components {
   .quote {
-    @apply text-[28px] leading-tight;
+    @apply text-[28px] leading-tight relative text-center text-primary-blue-200 font-manrope;
+  }
+  .quote::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22currentColor%22%20class%3D%22bi%20bi-quote%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M12%2012a1%201%200%200%200%201-1V8.558a1%201%200%200%200-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868%200-1.52.372a3.3%203.3%200%200%200-1.085.992%204.9%204.9%200%200%200-.62%201.458A7.7%207.7%200%200%200%209%207.558V11a1%201%200%200%200%201%201zm-6%200a1%201%200%200%200%201-1V8.558a1%201%200%200%200-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868%200-1.52.372a3.3%203.3%200%200%200-1.085.992%204.9%204.9%200%200%200-.62%201.458A7.7%207.7%200%200%200%203%207.558V11a1%201%200%200%200%201%201z%22%2F%3E%3C%2Fsvg%3E");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    transform: translateY(-60%);
+    @apply bg-primary-blue-200;
+  }
+  .quote::after {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22currentColor%22%20class%3D%22bi%20bi-quote%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M12%2012a1%201%200%200%200%201-1V8.558a1%201%200%200%200-1-1h-1.388q0-.527.062-1.054.093-.558.31-.992t.559-.683q.34-.279.868-.279V3q-.868%200-1.52.372a3.3%203.3%200%200%200-1.085.992%204.9%204.9%200%200%200-.62%201.458A7.7%207.7%200%200%200%209%207.558V11a1%201%200%200%200%201%201zm-6%200a1%201%200%200%200%201-1V8.558a1%201%200%200%200-1-1H4.612q0-.527.062-1.054.094-.558.31-.992.217-.434.559-.683.34-.279.868-.279V3q-.868%200-1.52.372a3.3%203.3%200%200%200-1.085.992%204.9%204.9%200%200%200-.62%201.458A7.7%207.7%200%200%200%203%207.558V11a1%201%200%200%200%201%201z%22%2F%3E%3C%2Fsvg%3E");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    transform: translateY(-50%) rotate(180deg);
+    @apply bg-primary-blue-200;
+  }
+  .btn {
+    @apply bg-primary-green-300 p-4 absolute bottom-0 translate-y-[50%] rounded-full cursor-pointer transition-all duration-75 ease-in-out;
+  }
+  .btn:hover {
+    box-shadow: 0px 0px 30px 2px var(--color-primary-green-300);
   }
 }
 
 @theme {
   --color-primary-blue-200: hsl(193, 38%, 86%);
   --color-primary-green-300: hsl(150, 100%, 66%);
-  --color-neutral-blue-600: hsl(190, 100%, 66%);
+  --color-neutral-blue-600: hsl(217, 19%, 38%);
+  --color-neutral-blue-650: hsl(218, 20%, 24%);
   --color-neutral-blue-900: hsl(217, 19%, 24%);
-  --color-neutral-blue-950: hsl(218, 123%, 16%);
+  --color-neutral-blue-950: hsl(218, 23%, 16%);
   --font-manrope: "Manrope", sans-serif;
 }
