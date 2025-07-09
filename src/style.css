@@ -1,6 +1,26 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+@import "tailwindcss";
 
-@layer components{
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+@layer components {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+@layer components {
+  .quote {
+    @apply text-[28px] leading-tight;
+  }
+}
+
+@theme {
+  --color-primary-blue-200: hsl(193, 38%, 86%);
+  --color-primary-green-300: hsl(150, 100%, 66%);
+  --color-neutral-blue-600: hsl(190, 100%, 66%);
+  --color-neutral-blue-900: hsl(217, 19%, 24%);
+  --color-neutral-blue-950: hsl(218, 123%, 16%);
+  --font-manrope: "Manrope", sans-serif;
 }
